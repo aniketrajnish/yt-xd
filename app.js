@@ -17,6 +17,11 @@ const STACK_TOP_MARGIN = 34;
 const STACK_BOTTOM_MARGIN = 28;
 const FONT_GROWTH_BUFFER = 1.06;
 const DEFAULT_BACKGROUND_RESOURCE_PATH = "resources/7a2191097428111c1d6aeed110439443.png";
+const THUMBNAIL_FINGERPRINT_WIDTH = 9;
+const THUMBNAIL_FINGERPRINT_HEIGHT = 8;
+const DEFAULT_THUMBNAIL_MAX_DISTANCE = 10;
+const HIGH_RES_THUMBNAIL_WIDTH = 1280;
+const HIGH_RES_THUMBNAIL_HEIGHT = 720;
 
 let assetStatePromise = null;
 let currentDownloadUrl = null;
@@ -514,6 +519,10 @@ function getMimeType(pathname) {
     return "image/jpeg";
   }
 
+  if (normalizedPath.endsWith(".webp")) {
+    return "image/webp";
+  }
+
   if (normalizedPath.endsWith(".woff")) {
     return "font/woff";
   }
@@ -563,6 +572,8 @@ async function ensureAssetsLoaded() {
         fontBase64: toBase64(fontBytes),
         measureContext: document.createElement("canvas").getContext("2d"),
         resourceCache: new Map(),
+        imageMetadataCache: new Map(),
+        imageFingerprintCache: new Map(),
       };
     })();
   }
@@ -585,30 +596,191 @@ async function getResourceDataUrl(assetState, assetPath) {
   return assetState.resourceCache.get(assetPath);
 }
 
-function buildVideoThumbnailCandidates(video) {
-  const candidates = [
-    video.thumbnailUrl,
-    `https://i.ytimg.com/vi/${video.videoId}/maxresdefault.jpg`,
-    `https://i.ytimg.com/vi/${video.videoId}/hq720.jpg`,
-    `https://i.ytimg.com/vi/${video.videoId}/sddefault.jpg`,
-    `https://i.ytimg.com/vi/${video.videoId}/hqdefault.jpg`,
-    `https://i.ytimg.com/vi/${video.videoId}/mqdefault.jpg`,
-    `https://i.ytimg.com/vi/${video.videoId}/default.jpg`,
+function buildGeneratedFrameThumbnailCandidates(videoId) {
+  return [
+    `https://i.ytimg.com/vi/${videoId}/hq1.jpg`,
+    `https://i.ytimg.com/vi/${videoId}/hq2.jpg`,
+    `https://i.ytimg.com/vi/${videoId}/hq3.jpg`,
+    `https://i.ytimg.com/vi/${videoId}/1.jpg`,
+    `https://i.ytimg.com/vi/${videoId}/2.jpg`,
+    `https://i.ytimg.com/vi/${videoId}/3.jpg`,
   ];
-
-  return [...new Set(candidates.filter(Boolean))];
 }
 
-async function getVideoBackgroundDataUrl(assetState, video, fallbackAssetPath) {
-  for (const candidate of buildVideoThumbnailCandidates(video)) {
+function buildVideoBackgroundCandidates(video) {
+  return [
+    `https://i.ytimg.com/vi_webp/${video.videoId}/maxresdefault.webp`,
+    `https://i.ytimg.com/vi/${video.videoId}/maxresdefault.jpg`,
+    `https://i.ytimg.com/vi_webp/${video.videoId}/hq720.webp`,
+    `https://i.ytimg.com/vi/${video.videoId}/hq720.jpg`,
+    `https://i.ytimg.com/vi/${video.videoId}/sddefault.jpg`,
+    video.thumbnailUrl,
+    `https://i.ytimg.com/vi/${video.videoId}/hqdefault.jpg`,
+  ].filter((value, index, values) => value && values.indexOf(value) === index);
+}
+
+function getLuminance(data, offset) {
+  return data[offset] * 0.299 + data[offset + 1] * 0.587 + data[offset + 2] * 0.114;
+}
+
+async function getImageMetadata(assetState, assetPath) {
+  if (!assetState.imageMetadataCache.has(assetPath)) {
+    assetState.imageMetadataCache.set(
+      assetPath,
+      (async () => {
+        const href = await getResourceDataUrl(assetState, assetPath);
+        const image = await loadImage(href);
+
+        return {
+          href,
+          image,
+          width: image.naturalWidth || image.width || 0,
+          height: image.naturalHeight || image.height || 0,
+        };
+      })(),
+    );
+  }
+
+  return assetState.imageMetadataCache.get(assetPath);
+}
+
+async function getImageFingerprint(assetState, assetPath) {
+  if (!assetState.imageFingerprintCache.has(assetPath)) {
+    assetState.imageFingerprintCache.set(
+      assetPath,
+      (async () => {
+        const imageMetadata = await getImageMetadata(assetState, assetPath);
+        const canvas = document.createElement("canvas");
+        canvas.width = THUMBNAIL_FINGERPRINT_WIDTH;
+        canvas.height = THUMBNAIL_FINGERPRINT_HEIGHT;
+        const context = canvas.getContext("2d");
+
+        if (!context) {
+          throw new Error("could not analyze thumbnail image");
+        }
+
+        context.drawImage(imageMetadata.image, 0, 0, canvas.width, canvas.height);
+
+        const { data } = context.getImageData(0, 0, canvas.width, canvas.height);
+        const fingerprint = [];
+
+        for (let y = 0; y < canvas.height; y += 1) {
+          for (let x = 0; x < canvas.width - 1; x += 1) {
+            const leftOffset = (y * canvas.width + x) * 4;
+            const rightOffset = (y * canvas.width + x + 1) * 4;
+            fingerprint.push(getLuminance(data, leftOffset) > getLuminance(data, rightOffset));
+          }
+        }
+
+        return fingerprint;
+      })(),
+    );
+  }
+
+  return assetState.imageFingerprintCache.get(assetPath);
+}
+
+function getFingerprintDistance(left, right) {
+  if (left.length !== right.length) {
+    throw new Error("thumbnail fingerprints are incompatible");
+  }
+
+  let distance = 0;
+
+  for (let index = 0; index < left.length; index += 1) {
+    if (left[index] !== right[index]) {
+      distance += 1;
+    }
+  }
+
+  return distance;
+}
+
+async function hasLikelyGeneratedThumbnail(assetState, video) {
+  if (!video.thumbnailUrl) {
+    return false;
+  }
+
+  let currentFingerprint;
+
+  try {
+    currentFingerprint = await getImageFingerprint(assetState, video.thumbnailUrl);
+  } catch (_error) {
+    return false;
+  }
+
+  for (const candidate of buildGeneratedFrameThumbnailCandidates(video.videoId)) {
     try {
-      return await getResourceDataUrl(assetState, candidate);
+      const candidateFingerprint = await getImageFingerprint(assetState, candidate);
+
+      if (
+        getFingerprintDistance(currentFingerprint, candidateFingerprint) <=
+        DEFAULT_THUMBNAIL_MAX_DISTANCE
+      ) {
+        return true;
+      }
     } catch (_error) {
       continue;
     }
   }
 
-  return getResourceDataUrl(assetState, fallbackAssetPath);
+  return false;
+}
+
+async function resolveBestVideoBackground(assetState, video) {
+  let bestCandidate = null;
+
+  for (const candidate of buildVideoBackgroundCandidates(video)) {
+    let metadata;
+
+    try {
+      metadata = await getImageMetadata(assetState, candidate);
+    } catch (_error) {
+      continue;
+    }
+
+    if (
+      metadata.width >= HIGH_RES_THUMBNAIL_WIDTH &&
+      metadata.height >= HIGH_RES_THUMBNAIL_HEIGHT
+    ) {
+      return {
+        href: metadata.href,
+        preserveAspectRatio: "xMidYMid slice",
+      };
+    }
+
+    if (
+      !bestCandidate ||
+      metadata.width * metadata.height > bestCandidate.width * bestCandidate.height
+    ) {
+      bestCandidate = metadata;
+    }
+  }
+
+  if (!bestCandidate) {
+    throw new Error("could not load any youtube thumbnail variants");
+  }
+
+  return {
+    href: bestCandidate.href,
+    preserveAspectRatio: "xMidYMid slice",
+  };
+}
+
+async function resolveBackgroundImage(assetState, video, fallbackAssetPath) {
+  if (!(await hasLikelyGeneratedThumbnail(assetState, video))) {
+    return {
+      href: await getResourceDataUrl(assetState, fallbackAssetPath),
+    };
+  }
+
+  try {
+    return await resolveBestVideoBackground(assetState, video);
+  } catch (_error) {
+    return {
+      href: await getResourceDataUrl(assetState, fallbackAssetPath),
+    };
+  }
 }
 
 async function resolveVideo(videoInput) {
@@ -634,7 +806,7 @@ async function resolveVideo(videoInput) {
     title,
     courseName,
     lessonTitle,
-    thumbnailUrl: payload.thumbnail_url || null,
+    thumbnailUrl: payload.thumbnail_url || `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`,
   };
 }
 
@@ -659,10 +831,8 @@ async function createSvg(assetState, video) {
   const shapeNodes = await Promise.all(
     template.shapes.map(async (shape) => {
       if (shape.resourcePath === DEFAULT_BACKGROUND_RESOURCE_PATH) {
-        const href = await getVideoBackgroundDataUrl(assetState, video, shape.resourcePath);
-        return createSvgImageNode(shape, href, {
-          preserveAspectRatio: "xMidYMid slice",
-        });
+        const backgroundImage = await resolveBackgroundImage(assetState, video, shape.resourcePath);
+        return createSvgImageNode(shape, backgroundImage.href, backgroundImage);
       }
 
       const href = await getResourceDataUrl(assetState, shape.resourcePath);

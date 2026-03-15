@@ -1,3 +1,3 @@
-# yt-xd
+# ap-thumb
 
 for pitaji
