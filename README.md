@@ -1,62 +1,89 @@
 # yt-xd
 
-Headless website + local uploader for the Advanced Physics thumbnail workflow.
+Minimal Advanced Physics thumbnail site:
 
-## Flow
+- one text box
+- one generate button
+- worker-managed Google auth
+- headless render + upload
 
-1. Paste a YouTube video URL from the Advanced Physics channel into the website.
-2. The server reads [ap.xd](C:\Personal Projects\yt-xd\ap.xd) directly, extracts the matching course template, and renders the thumbnail headlessly.
-3. The PNG is saved to `C:\Personal Projects\ap`.
-4. The same flow can upload the PNG with YouTube's `thumbnails.set` API.
+Runtime rendering uses the committed asset pack in [assets/templates.json](C:\Personal Projects\yt-xd\assets\templates.json).
 
-## What is in this repo
+## Main files
 
+- [index.html](C:\Personal Projects\yt-xd\index.html)
+  Static frontend for GitHub Pages.
 - [app.js](C:\Personal Projects\yt-xd\app.js)
-  Express website + YouTube upload service.
-- [thumbnail-engine.js](C:\Personal Projects\yt-xd\thumbnail-engine.js)
-  Headless renderer that rebuilds the thumbnail layout from `ap.xd`.
-- [ap.xd](C:\Personal Projects\yt-xd\ap.xd)
-  The source template file used by the renderer.
-- [.env.example](C:\Personal Projects\yt-xd\.env.example)
-  Required Google OAuth and local path configuration.
+  One-field browser flow. If auth is missing, it redirects to Google and then resumes automatically.
+- [worker.mjs](C:\Personal Projects\yt-xd\worker.mjs)
+  Cloudflare Worker API. It stores the YouTube refresh token in an encrypted cookie, renders the thumbnail, and uploads it.
+- [smoke-render.mjs](C:\Personal Projects\yt-xd\smoke-render.mjs)
+  Local renderer smoke test.
+- [dev-site.mjs](C:\Personal Projects\yt-xd\dev-site.mjs)
+  Simple local static server for npm-based validation.
 
-## Setup
+## Local workflow
 
-1. Enable `YouTube Data API v3` in a Google Cloud project.
-2. Create an OAuth client with redirect URI `http://127.0.0.1:4318/auth/callback`.
-3. Copy `.env.example` to `.env` and fill in:
-   - `YOUTUBE_CLIENT_ID`
-   - `YOUTUBE_CLIENT_SECRET`
-   - `SESSION_SECRET`
-   - `OUTPUT_DIRECTORY` if you want thumbnails saved somewhere other than `C:\Personal Projects\ap`
-   - `TEMPLATE_XD_PATH` if `ap.xd` lives elsewhere
-4. Start the app:
+1. Install dependencies:
 
 ```bash
-npm start
+npm install
 ```
 
-5. Open `http://127.0.0.1:4318` in your browser.
-6. Click `Connect YouTube` once to complete OAuth.
+2. Copy [.dev.vars.example](C:\Personal Projects\yt-xd\.dev.vars.example) to `.dev.vars` and fill in:
+   - `SESSION_SECRET`
+   - `YOUTUBE_CLIENT_ID`
+   - `YOUTUBE_CLIENT_SECRET`
+   - `ALLOWED_ORIGIN`
+   - `FRONTEND_FALLBACK_URL`
 
-## Using the Website
+3. Run the static site:
 
-- Click `Check Status` to verify templates and OAuth.
-- Paste a YouTube video URL or video ID.
-- Click `Resolve Title` to preview the parsed course/lesson split.
-- Click `Preview Render` to generate the PNG without uploading.
-- Click `Render + Upload` to generate the PNG and update the YouTube thumbnail in one step.
+```bash
+npm run dev:site
+```
 
-## Notes
+4. Run the worker in another terminal:
 
-- This is a true headless flow. Adobe XD does not need to be open.
-- The renderer parses `ap.xd` directly and uses its artboard metadata and embedded images as the template source.
-- Existing artboards are matched by the course-title text on the artboard, not by the generic artboard names in the file.
-- If a course template does not exist yet, the renderer falls back to `FALLBACK_COURSE_NAME` and swaps in the new course title.
-- The OAuth refresh token is stored locally at `.data/youtube-tokens.json`.
+```bash
+npm run dev:worker
+```
+
+5. Open `http://127.0.0.1:4173`, paste the local worker URL once when prompted, then test the generate flow.
+
+## Deploy
+
+1. Set the worker vars in [wrangler.toml](C:\Personal Projects\yt-xd\wrangler.toml) or Cloudflare:
+   - `FALLBACK_COURSE_NAME`
+   - `ALLOWED_ORIGIN`
+   - `FRONTEND_FALLBACK_URL`
+
+2. Add these worker secrets:
+   - `SESSION_SECRET`
+   - `YOUTUBE_CLIENT_ID`
+   - `YOUTUBE_CLIENT_SECRET`
+
+3. In Google Cloud, add your worker callback URL as an authorized redirect URI:
+
+```text
+https://YOUR-WORKER/auth/callback
+```
+
+4. Deploy the worker:
+
+```bash
+npm run deploy:worker
+```
+
+5. Publish the static frontend on GitHub Pages.
+
+6. On first use, the site prompts once for the worker URL if it is not hardcoded in [index.html](C:\Personal Projects\yt-xd\index.html).
+
+For the smoothest mobile auth flow, put the worker on a custom subdomain of the same site as the frontend instead of leaving it on `workers.dev`.
 
 ## Verify
 
 ```bash
 npm run check
+npm run smoke:render
 ```

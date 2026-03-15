@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="thumbnailer-api-base" content="" />
+    <title>Advanced Physics Thumbnail</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="topbar">
+        <div class="brand-copy">
+          <h1>  create thumbnail for
+            <a href="https://www.youtube.com/@AdvancedPhysics/videos" target="_blank" rel="noreferrer">
+              advanced physics
+            </a>
+          </h1>
+          <p class="brand-subtitle">paste youtube video url and press generate</p>
+        </div>
+      </header>
+
+      <section class="panel">
+        <label for="videoInput">youtube url</label>
+        <form id="thumbnailForm" class="controls">
+          <input
+            id="videoInput"
+            type="url"
+            inputmode="url"
+            autocomplete="off"
+            placeholder="https://www.youtube.com/watch?v=..."
+            required
+          />
+          <button id="generateButton" type="submit">generate</button>
+        </form>
+        <p id="statusText" class="status">ready.</p>
+      </section>
+
+      <section id="result" class="panel result" hidden>
+        <p id="resultTitle" class="result-title"></p>
+        <p id="resultDetail" class="result-detail"></p>
+        <img id="previewImage" class="preview" alt="Rendered thumbnail preview" />
+      </section>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

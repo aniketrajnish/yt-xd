@@ -1,11 +1,14 @@
 {
   "name": "yt-xd",
   "version": "1.0.0",
-  "description": "Headless Advanced Physics thumbnail generator and YouTube uploader",
-  "main": "app.js",
+  "description": "GitHub Pages frontend + Cloudflare Worker backend for Advanced Physics thumbnails",
+  "main": "worker.mjs",
   "scripts": {
-    "start": "node app.js",
-    "check": "node --check app.js && node --check thumbnail-engine.js"
+    "dev:site": "node dev-site.mjs",
+    "smoke:render": "node smoke-render.mjs",
+    "dev:worker": "wrangler dev",
+    "deploy:worker": "wrangler deploy",
+    "check": "node --check app.js && node --check worker.mjs && node --check dev-site.mjs && node --check smoke-render.mjs && node --check thumbnail-common.mjs && node --check thumbnail-service.mjs"
   },
   "repository": {
     "type": "git",
@@ -20,13 +23,11 @@
   },
   "homepage": "https://github.com/aniketrajnish/yt-xd#readme",
   "dependencies": {
-    "@fontsource/englebert": "^5.2.10",
-    "@napi-rs/canvas": "^0.1.96",
-    "adm-zip": "^0.5.16",
-    "dotenv": "^17.3.1",
-    "express": "^5.2.1",
-    "express-session": "^1.19.0",
-    "googleapis": "^171.4.0"
+    "@resvg/resvg-wasm": "^2.6.2",
+    "opentype.js": "^1.3.4"
+  },
+  "devDependencies": {
+    "wrangler": "^4.37.1"
   },
   "private": true
 }

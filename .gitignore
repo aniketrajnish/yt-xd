@@ -1,4 +1,6 @@
 node_modules/
 .env
-.data/
+.dev.vars
+.wrangler/
+smoke-render.png
 .vs/

@@ -1,0 +1,1080 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-15T20:32:47.110Z",
+  "canvas": {
+    "width": 1280,
+    "height": 720
+  },
+  "font": {
+    "family": "Englebert",
+    "assetPath": "fonts/englebert-latin-400-normal.woff"
+  },
+  "fallbackCourseName": "Modern physics",
+  "templates": [
+    {
+      "id": "artboard-56eccf62-d91a-4534-a1a4-e71bfeb0abb7",
+      "artboardName": "SPRK_default_preset_name_custom – 1",
+      "courseName": "NUCLEAR PHYSICS",
+      "courseKey": "NUCLEARPHYSICS",
+      "courseNode": {
+        "name": "NUCLEAR PHYSICS",
+        "text": "NUCLEAR PHYSICS",
+        "x": 640,
+        "y": 304,
+        "fontSize": 181,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 229,
+        "maxLines": 2,
+        "minFontSize": 94
+      },
+      "subtitleNode": {
+        "name": "Elementary Particles\nSymmetry and Charge Conjugation",
+        "text": "Elementary Particles\nSymmetry and Charge Conjugation",
+        "x": 640,
+        "y": 434,
+        "fontSize": 94,
+        "lineHeight": 119,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1080,
+        "maxHeight": 320,
+        "maxLines": 3,
+        "minFontSize": 54
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-aa3544ec-fa60-49f0-b754-cdc1c7a302e2",
+      "artboardName": "SPRK_default_preset_name_custom – 2",
+      "courseName": "Concepts and Misconceptions\nin Physics",
+      "courseKey": "CONCEPTSANDMISCONCEPTIONSINPHYSICS",
+      "courseNode": {
+        "name": "Concepts and Misconceptions\nin Physics",
+        "text": "Concepts and Misconceptions\nin Physics",
+        "x": 640,
+        "y": 259,
+        "fontSize": 103,
+        "lineHeight": 120,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 271,
+        "maxLines": 2,
+        "minFontSize": 74
+      },
+      "subtitleNode": {
+        "name": "Can We Define Volume Charge\nDensity Due To A Point Charge?",
+        "text": "Can We Define Volume Charge\nDensity Due To A Point Charge?",
+        "x": 640,
+        "y": 501,
+        "fontSize": 103,
+        "lineHeight": 119,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1080,
+        "maxHeight": 320,
+        "maxLines": 3,
+        "minFontSize": 54
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-a46bbbcd-a5cf-4280-810b-59133fd34071",
+      "artboardName": "SPRK_default_preset_name_custom – 3",
+      "courseName": "EMT/Classical Electrodynamics",
+      "courseKey": "EMTCLASSICALELECTRODYNAMICS",
+      "courseNode": {
+        "name": "EMT/Classical Electrodynamics",
+        "text": "EMT/Classical Electrodynamics",
+        "x": 640,
+        "y": 278,
+        "fontSize": 102,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 220,
+        "maxLines": 2,
+        "minFontSize": 74
+      },
+      "subtitleNode": {
+        "name": "Transmission Line\nStanding Wave and\nStanding Wave Ratio",
+        "text": "Transmission Line\nStanding Wave and\nStanding Wave Ratio",
+        "x": 640,
+        "y": 405,
+        "fontSize": 100,
+        "lineHeight": 126,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1060,
+        "maxHeight": 396,
+        "maxLines": 4,
+        "minFontSize": 54
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-0e5018f4-99e2-449d-bc68-4e4896bf24b9",
+      "artboardName": "SPRK_default_preset_name_custom – 4",
+      "courseName": "Classical MECHANICS",
+      "courseKey": "CLASSICALMECHANICS",
+      "courseNode": {
+        "name": "Classical MECHANICS",
+        "text": "Classical MECHANICS",
+        "x": 640,
+        "y": 312,
+        "fontSize": 149,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 220,
+        "maxLines": 2,
+        "minFontSize": 77
+      },
+      "subtitleNode": {
+        "name": " Hamilton-Jacobi Theory\nSolution of Kepler’s Problem\nAction-Angle Variables",
+        "text": " Hamilton-Jacobi Theory\nSolution of Kepler’s Problem\nAction-Angle Variables",
+        "x": 640,
+        "y": 429,
+        "fontSize": 94,
+        "lineHeight": 112,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1076.6671875000002,
+        "maxHeight": 362,
+        "maxLines": 4,
+        "minFontSize": 54
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-e550b2c1-87b9-41a6-bbe4-e37034d64dc5",
+      "artboardName": "SPRK_default_preset_name_custom – 5",
+      "courseName": "Atomic and Molecular Physics",
+      "courseKey": "ATOMICANDMOLECULARPHYSICS",
+      "courseNode": {
+        "name": "Atomic and Molecular Physics",
+        "text": "Atomic and Molecular Physics",
+        "x": 640,
+        "y": 271,
+        "fontSize": 100,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 220,
+        "maxLines": 2,
+        "minFontSize": 74
+      },
+      "subtitleNode": {
+        "name": "Electronic Spectra\nSalient Features",
+        "text": "Electronic Spectra\nSalient Features",
+        "x": 640,
+        "y": 432,
+        "fontSize": 136,
+        "lineHeight": 172,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1060,
+        "maxHeight": 352,
+        "maxLines": 3,
+        "minFontSize": 71
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-a00eda82-6ec7-4d03-93cd-368bda321f6f",
+      "artboardName": "SPRK_default_preset_name_custom – 6",
+      "courseName": "Special Relativity",
+      "courseKey": "SPECIALRELATIVITY",
+      "courseNode": {
+        "name": "Special Relativity",
+        "text": "Special Relativity",
+        "x": 640,
+        "y": 305,
+        "fontSize": 165,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 220,
+        "maxLines": 2,
+        "minFontSize": 86
+      },
+      "subtitleNode": {
+        "name": "Lorentz Transformations\nProper and Improper\nLorentz Transformations",
+        "text": "Lorentz Transformations\nProper and Improper\nLorentz Transformations",
+        "x": 640,
+        "y": 423,
+        "fontSize": 102,
+        "lineHeight": 115,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1060,
+        "maxHeight": 376,
+        "maxLines": 4,
+        "minFontSize": 54
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-10a1a198-615f-417e-9b1f-82a82ec2d092",
+      "artboardName": "SPRK_default_preset_name_custom – 7",
+      "courseName": "QUANTUM MECHANICS",
+      "courseKey": "QUANTUMMECHANICS",
+      "courseNode": {
+        "name": "QUANTUM MECHANICS",
+        "text": "QUANTUM MECHANICS",
+        "x": 640,
+        "y": 299,
+        "fontSize": 164,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 220,
+        "maxLines": 2,
+        "minFontSize": 85
+      },
+      "subtitleNode": {
+        "name": "Time-Dependent Perturbation Theory\nAdiabatic & \nSudden Approximations",
+        "text": "Time-Dependent Perturbation Theory\nAdiabatic & \nSudden Approximations",
+        "x": 640,
+        "y": 426,
+        "fontSize": 86,
+        "lineHeight": 98,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1080,
+        "maxHeight": 326,
+        "maxLines": 4,
+        "minFontSize": 54
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-c2e4da4e-4bbc-40f2-8353-479195cd4161",
+      "artboardName": "SPRK_default_preset_name_custom – 8",
+      "courseName": "Statistical Mechanics",
+      "courseKey": "STATISTICALMECHANICS",
+      "courseNode": {
+        "name": "Statistical Mechanics",
+        "text": "Statistical Mechanics",
+        "x": 640,
+        "y": 281,
+        "fontSize": 133,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 220,
+        "maxLines": 2,
+        "minFontSize": 74
+      },
+      "subtitleNode": {
+        "name": " Non Equilibrium Processes\nApplications of\nOnsager Relations",
+        "text": " Non Equilibrium Processes\nApplications of\nOnsager Relations",
+        "x": 640,
+        "y": 421,
+        "fontSize": 104,
+        "lineHeight": 114,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1080,
+        "maxHeight": 376,
+        "maxLines": 4,
+        "minFontSize": 54
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-071ed20e-f8da-44d9-92a9-4e92fb8432a9",
+      "artboardName": "SPRK_default_preset_name_custom – 10",
+      "courseName": "Condensed Matter Physics",
+      "courseKey": "CONDENSEDMATTERPHYSICS",
+      "courseNode": {
+        "name": "Condensed Matter Physics",
+        "text": "Condensed Matter Physics",
+        "x": 640,
+        "y": 262,
+        "fontSize": 113,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 220,
+        "maxLines": 2,
+        "minFontSize": 74
+      },
+      "subtitleNode": {
+        "name": "Sound Waves\nAcoustic of Buildings\nSabine’s Formula",
+        "text": "Sound Waves\nAcoustic of Buildings\nSabine’s Formula",
+        "x": 640,
+        "y": 384,
+        "fontSize": 110,
+        "lineHeight": 123,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1060,
+        "maxHeight": 400,
+        "maxLines": 4,
+        "minFontSize": 57
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -55,
+          "y": -170,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-b2af1531-8323-4d2b-b1f1-306774df7ed8",
+      "artboardName": "SPRK_default_preset_name_custom – 11",
+      "courseName": "MATHEMATICAL PHYSICS",
+      "courseKey": "MATHEMATICALPHYSICS",
+      "courseNode": {
+        "name": "MATHEMATICAL PHYSICS",
+        "text": "MATHEMATICAL PHYSICS",
+        "x": 640,
+        "y": 283,
+        "fontSize": 126,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 220,
+        "maxLines": 2,
+        "minFontSize": 74
+      },
+      "subtitleNode": {
+        "name": "Maxima and Minima\nSolutions of the\nPYQs of IIT JAM Examination",
+        "text": "Maxima and Minima\nSolutions of the\nPYQs of IIT JAM Examination",
+        "x": 640,
+        "y": 390,
+        "fontSize": 91,
+        "lineHeight": 115,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1060,
+        "maxHeight": 365,
+        "maxLines": 4,
+        "minFontSize": 54
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-d8528993-b2d6-4d2b-8423-d5d3a6e62660",
+      "artboardName": "SPRK_default_preset_name_custom – 12",
+      "courseName": "waves and oscillations",
+      "courseKey": "WAVESANDOSCILLATIONS",
+      "courseNode": {
+        "name": "waves and oscillations",
+        "text": "waves and oscillations",
+        "x": 640,
+        "y": 283,
+        "fontSize": 126,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 220,
+        "maxLines": 2,
+        "minFontSize": 74
+      },
+      "subtitleNode": {
+        "name": "Wave Motion\nHelmholtz Theory of\nCombinational Tone",
+        "text": "Wave Motion\nHelmholtz Theory of\nCombinational Tone",
+        "x": 640,
+        "y": 423,
+        "fontSize": 106,
+        "lineHeight": 109,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1060,
+        "maxHeight": 368,
+        "maxLines": 4,
+        "minFontSize": 55
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-482d4591-9e8e-40f0-8adb-920c030d2c40",
+      "artboardName": "SPRK_default_preset_name_custom – 13",
+      "courseName": "General Relativity",
+      "courseKey": "GENERALRELATIVITY",
+      "courseNode": {
+        "name": "General Relativity",
+        "text": "General Relativity",
+        "x": 640,
+        "y": 322,
+        "fontSize": 167,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 220,
+        "maxLines": 2,
+        "minFontSize": 87
+      },
+      "subtitleNode": {
+        "name": "Generation of\nGravitational Waves ",
+        "text": "Generation of\nGravitational Waves ",
+        "x": 640,
+        "y": 459,
+        "fontSize": 131,
+        "lineHeight": 149,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1060,
+        "maxHeight": 324,
+        "maxLines": 3,
+        "minFontSize": 68
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-fb40add5-5987-4ba5-8d87-24c60e7d505e",
+      "artboardName": "SPRK_default_preset_name_custom – 14",
+      "courseName": "BSUSC",
+      "courseKey": "BSUSC",
+      "courseNode": {
+        "name": "BSUSC",
+        "text": "BSUSC",
+        "x": 640,
+        "y": 323,
+        "fontSize": 193,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 241,
+        "maxLines": 2,
+        "minFontSize": 100
+      },
+      "subtitleNode": {
+        "name": "How to prepare for of\nAssistant Professor\n(Physics)",
+        "text": "How to prepare for of\nAssistant Professor\n(Physics)",
+        "x": 640,
+        "y": 428,
+        "fontSize": 100,
+        "lineHeight": 102,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1060,
+        "maxHeight": 348,
+        "maxLines": 4,
+        "minFontSize": 54
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-949631fa-74a8-467c-a29b-58b45625e30c",
+      "artboardName": "SPRK_default_preset_name_custom – 15",
+      "courseName": "Modern physics",
+      "courseKey": "MODERNPHYSICS",
+      "courseNode": {
+        "name": "Modern physics",
+        "text": "Modern physics",
+        "x": 654,
+        "y": 327,
+        "fontSize": 181,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 229,
+        "maxLines": 2,
+        "minFontSize": 94
+      },
+      "subtitleNode": {
+        "name": "Pair Production\nConceptual Numerical Problems\nin Pair Production",
+        "text": "Pair Production\nConceptual Numerical Problems\nin Pair Production",
+        "x": 640,
+        "y": 424,
+        "fontSize": 84,
+        "lineHeight": 106,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1080,
+        "maxHeight": 340,
+        "maxLines": 4,
+        "minFontSize": 54
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    },
+    {
+      "id": "artboard-dc762242-d71a-4df5-b1a6-9251a2e06e76",
+      "artboardName": "SPRK_default_preset_name_custom – 16",
+      "courseName": "Electronics",
+      "courseKey": "ELECTRONICS",
+      "courseNode": {
+        "name": "Electronics",
+        "text": "Electronics",
+        "x": 640,
+        "y": 347,
+        "fontSize": 226,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "center",
+        "textTransform": "uppercase",
+        "maxWidth": 1120,
+        "maxHeight": 274,
+        "maxLines": 2,
+        "minFontSize": 118
+      },
+      "subtitleNode": {
+        "name": "Semiconductor Junctions\nWidth of Charge Depletion Region\nin Unbiased p - n Junction",
+        "text": "Semiconductor Junctions\nWidth of Charge Depletion Region\nin Unbiased p - n Junction",
+        "x": 640,
+        "y": 454,
+        "fontSize": 78,
+        "lineHeight": 98,
+        "color": "rgb(187, 255, 156)",
+        "align": "center",
+        "textTransform": "none",
+        "maxWidth": 1060,
+        "maxHeight": 320,
+        "maxLines": 4,
+        "minFontSize": 54
+      },
+      "titleNode": {
+        "name": "Advanced Physics",
+        "text": "Advanced Physics",
+        "x": 527,
+        "y": 142,
+        "fontSize": 37,
+        "lineHeight": null,
+        "color": "rgb(255, 255, 255)",
+        "align": "left",
+        "textTransform": "none"
+      },
+      "shapes": [
+        {
+          "index": 0,
+          "name": "vlcsnap-2022-03-12-00h27m48s777",
+          "x": -77,
+          "y": -172,
+          "width": 1375,
+          "height": 1031,
+          "opacity": 0.25,
+          "resourceKey": "7a2191097428111c1d6aeed110439443",
+          "resourcePath": "resources/7a2191097428111c1d6aeed110439443.png"
+        },
+        {
+          "index": 1,
+          "name": "Image 1",
+          "x": 530,
+          "y": 26,
+          "width": 221,
+          "height": 85,
+          "opacity": 1,
+          "resourceKey": "16e29523cf263d1aaeaea54284f8ac14",
+          "resourcePath": "resources/16e29523cf263d1aaeaea54284f8ac14.png"
+        }
+      ]
+    }
+  ]
+}
