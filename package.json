@@ -1,5 +1,5 @@
 {
-  "name": "yt-xd",
+  "name": "ap-thumb",
   "version": "1.0.0",
   "description": "Static Advanced Physics thumbnail generator",
   "scripts": {
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aniketrajnish/yt-xd.git"
+    "url": "git+https://github.com/aniketrajnish/ap-thumb.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/aniketrajnish/yt-xd/issues"
+    "url": "https://github.com/aniketrajnish/ap-thumb/issues"
   },
-  "homepage": "https://github.com/aniketrajnish/yt-xd#readme",
+  "homepage": "https://github.com/aniketrajnish/ap-thumb#readme",
   "private": true
 }
