@@ -1,5 +1,5 @@
 {
-  "name": "ap-thumb",
+  "name": "ap-thumb-gen",
   "version": "1.0.0",
   "description": "Static Advanced Physics thumbnail generator",
   "scripts": {
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aniketrajnish/ap-thumb.git"
+    "url": "git+https://github.com/aniketrajnish/ap-thumb-gen.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/aniketrajnish/ap-thumb/issues"
+    "url": "https://github.com/aniketrajnish/ap-thumb-gen/issues"
   },
-  "homepage": "https://github.com/aniketrajnish/ap-thumb#readme",
+  "homepage": "https://github.com/aniketrajnish/ap-thumb-gen#readme",
   "private": true
 }

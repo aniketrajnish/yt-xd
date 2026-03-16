@@ -1,3 +1,3 @@
-# ap-thumb
+# ap-thumb-gen
 
 for pitaji
